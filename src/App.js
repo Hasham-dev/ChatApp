@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState('abubaker')
+  if (name)
+    return <div />
+
+  const myFunc = (a, b, c, d) => {
+
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        Hello {name}
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahhdddddabbbhhhhhjjj
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
