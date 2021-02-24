@@ -7,7 +7,7 @@ function App() {
     return <div />
 
   const myFunc = (a, b, c, d) => {
-
+    console.log('Hello')
   }
 
   return (
