@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Image } from './ChatMessagesElement';
 
 function ChatMessage({ message }) {
     const {
@@ -7,15 +8,17 @@ function ChatMessage({ message }) {
         photoURL,
     } = message;
     return (
-        <div>
-            <div>
-                <img src={photoURL} alt="{user}'s pfp" />
-            </div>
-            <div>
-                <p>{user}</p>
-                <p>{body}</p>
-            </div>
-        </div>
+        <Container>
+            <ContainerWrapper>
+                <div>
+                    <Image src={photoURL} alt="{user}'s pfp" />
+                </div>
+                <div>
+                    <p>{user}</p>
+                    <p>{body}</p>
+                </div>
+            </ContainerWrapper>
+        </Container>
     );
 }
 
