@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { firebas, firestore, auth } from '../../services/firebase';
 import ChatMessage from '../ChatMessage/ChatMessage';
+import { ChatRoomContainer, Title } from './ChatRoomELement';
 
 function ChatRoom() {
     const dummy = useRef();
@@ -39,17 +40,20 @@ function ChatRoom() {
 
     return (
         <div>
-            <div>
+            <ChatRoomContainer>
+                <Title>
+                    Chit Chat App
+                </Title>
                 {
                     messages
                     && messages.map((msg) => (
-                    <ChatMessage
-                        key={msg.id}
-                        message={msg} />
+                        <ChatMessage
+                            key={msg.id}
+                            message={msg} />
                     ))
                 }
                 <span ref={dummy} />
-            </div>
+            </ChatRoomContainer>
             <div>
                 <input
                     value={formValue}
