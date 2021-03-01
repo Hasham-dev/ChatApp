@@ -61,6 +61,7 @@
         "semi": "off",
         "react/jsx-one-expression-per-line": "off",
         "quotes": "warn",
-        "comma-dangle": "off"
+        "comma-dangle": "off",
+        "react/prop-types": "off"
     }
 }
