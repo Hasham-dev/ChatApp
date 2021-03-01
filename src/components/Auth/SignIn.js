@@ -1,5 +1,6 @@
 import React from 'react';
 import { firebas, auth } from '../../services/firebase'
+import { Button, Container, Title } from './SignInElement';
 
 function SignIn() {
   const signInWithGoogle = () => {
@@ -7,11 +8,12 @@ function SignIn() {
     auth.signInWithPopup(provider);
   }
   return (
-    <div>
-    <button type="button" onClick={signInWithGoogle}>
+    <Container>
+    <Title>Chit Chat App</Title>
+    <Button type="button" onClick={signInWithGoogle}>
             Sign In With Google
-    </button>
-    </div>
+    </Button>
+    </Container>
     )
 }
 

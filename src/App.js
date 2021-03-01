@@ -5,17 +5,20 @@ import { auth, firestore, firebas } from './services/firebase';
 import SignIn from './components/Auth/SignIn';
 import SignOut from './components/Auth/SignOut';
 import ChatRoom from './components/ChatRoom/ChatRoom';
+import { Container, ContainerWrapper } from './AppElement'
 
 function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div>
-      <SignOut />
-      <section>
-        {user ? <ChatRoom /> : <SignIn />}
-      </section>
-    </div>
+    <ContainerWrapper>
+      <Container>
+        <SignOut />
+        <section>
+          {user ? <ChatRoom /> : <SignIn />}
+        </section>
+      </Container>
+    </ContainerWrapper>
   );
 }
 

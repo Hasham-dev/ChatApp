@@ -1,15 +1,16 @@
 import React from 'react';
 import { auth } from '../../services/firebase';
+import { Button } from './SignOutElement';
 
 function SignOut() {
     return auth.currentUser && (
         <div>
-            <button
+            <Button
                 type="button"
                 onClick={() => auth.signOut()}
             >
                 Sign Out
-            </button>
+            </Button>
         </div>
     )
 }
