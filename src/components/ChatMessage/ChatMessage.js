@@ -16,12 +16,19 @@ function ChatMessage({ message }) {
         createdAt
     } = message;
     const [messageDate, setMessageDate] = useState()
+
+    const fetchDate = async () => {
+        if (createdAt !== null) {
+            const date = await new Date(createdAt.seconds * 1000)
+                .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            console.log(date);
+            setMessageDate(date);
+        }
+    }
+
     useEffect(() => {
-        const date = new Date(createdAt.seconds * 1000)
-            .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        console.log(date);
-        setMessageDate(date);
-    }, [])
+        fetchDate()
+    }, [createdAt])
     if (uid === auth.currentUser.uid) {
         return (
             <Container user>
