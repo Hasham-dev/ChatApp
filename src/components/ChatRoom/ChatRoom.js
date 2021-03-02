@@ -33,10 +33,11 @@ function ChatRoom() {
             messagesRef.add({
                 user: displayName,
                 body: formValue,
-                createdAt: firebas.firestore.FieldValue.serverTimestamp(),
+                createdAt: new Date(),
                 uid,
                 photoURL,
             })
+            console.log('Sended Success');
         } catch (err) {
             console.log(err);
         }
