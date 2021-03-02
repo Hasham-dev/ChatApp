@@ -5,7 +5,10 @@ import ChatMessage from '../ChatMessage/ChatMessage';
 import {
     ChatRoomContainer,
     Title,
-    ChatMessagesContainer
+    ChatMessagesContainer,
+    ChatInput,
+    InputWrapper,
+    SendButton
 } from './ChatRoomELement';
 
 function ChatRoom() {
@@ -60,20 +63,20 @@ function ChatRoom() {
                 </ChatMessagesContainer>
                 <span ref={dummy} />
             </ChatRoomContainer>
-            <div>
-                <input
+            <InputWrapper>
+                <ChatInput
                     value={formValue}
                     onChange={(e) => setFormValue(e.target.value)}
                     placeholder="Say Something!"
                 />
-                <button
+                <SendButton
                     type="submit"
                     disabled={!formValue}
                     onClick={sendMessage}
                 >
                     Send
-                </button>
-            </div>
+                </SendButton>
+            </InputWrapper>
         </div>
     )
 }

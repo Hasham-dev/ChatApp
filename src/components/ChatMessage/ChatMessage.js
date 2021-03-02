@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Container,
     Image,
@@ -12,12 +12,22 @@ function ChatMessage({ message }) {
         user,
         body,
         photoURL,
-        uid
+        uid,
+        createdAt
     } = message;
-
+    const [messageDate, setMessageDate] = useState()
+    useEffect(() => {
+        const date = new Date(createdAt.seconds * 1000)
+            .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        console.log(date);
+        setMessageDate(date);
+    }, [])
     if (uid === auth.currentUser.uid) {
         return (
             <Container user>
+                <p>
+                    {messageDate}
+                </p>
                 <ContainerWrapper user>
                     <UserName>{user}</UserName>
                     <p>{body}</p>
@@ -37,6 +47,9 @@ function ChatMessage({ message }) {
                 <UserName>{user}</UserName>
                 <p>{body}</p>
             </ContainerWrapper>
+            <p>
+                {messageDate}
+            </p>
         </Container>
     );
 }

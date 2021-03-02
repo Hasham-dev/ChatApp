@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Button = styled.button`
 width: 20vw;
 height: 40px;
-padding: 10px;
 font-weight: bolder;
 font-size: 15px;
 border: none;
@@ -16,7 +15,7 @@ transition: 0.5s ease-in-out;
 background-image: linear-gradient(to left bottom, #3c6cf4, #3661f4,
  #3355f4, #3448f2, #3939f0);
  border-radius: 6px;
-    margin-top: 50vh;
+    margin-top: 20vh;
 &:hover{
     background-color: #fff;
     color: black;
