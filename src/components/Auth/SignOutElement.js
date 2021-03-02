@@ -23,6 +23,7 @@ background-image: linear-gradient(to left bottom, #3c6cf4, #3661f4,
     color: black;
     transition: 0.5s ease-in-out;
 }
+z-index: 999;
 
 `;
 

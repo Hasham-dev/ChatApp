@@ -10,3 +10,12 @@ font-size: 30px;
 font-family: Arial, Helvetica, sans-serif;
 
 `
+export const ChatMessagesContainer = styled.div`
+background-color: #fff;
+width: 70vw;
+margin: 10px auto;
+padding: 20px;
+padding-top: 60px;
+border: 1px solid black;
+border-radius: 10px;
+`
