@@ -33,7 +33,7 @@ function ChatRoom() {
             messagesRef.add({
                 user: displayName,
                 body: formValue,
-                createdAt: new Date(),
+                createdAt: firebas.firestore.FieldValue.serverTimestamp(),
                 uid,
                 photoURL,
             })

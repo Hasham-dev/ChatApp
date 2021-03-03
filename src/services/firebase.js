@@ -3,12 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBt3jwDsxbQMmFefakAqjWs4QsnsPZsi_s",
-  authDomain: "chatt-app-234fc.firebaseapp.com",
-  projectId: "chatt-app-234fc",
-  storageBucket: "chatt-app-234fc.appspot.com",
-  messagingSenderId: "8397769437",
-  appId: "1:8397769437:web:6a480d4c75a5cb14a3e934"
+  apiKey: "AIzaSyCCVOVAznEQUOejpGe5Worq2YS9MWSXP0Y",
+  authDomain: "chattweb-hv.firebaseapp.com",
+  projectId: "chattweb-hv",
+  storageBucket: "chattweb-hv.appspot.com",
+  messagingSenderId: "138045393049",
+  appId: "1:138045393049:web:c29c22b1bea4c729b09008",
+  measurementId: "G-9GSJG0NWQ4"
 };
 
 // Initialize Fireb  se
